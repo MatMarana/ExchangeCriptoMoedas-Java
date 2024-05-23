@@ -19,11 +19,11 @@ public class Real extends Moedas{
         this.reais = reais;
     }
     
-    public void depositar(int quantidade){
+    public void depositar(float quantidade){
         reais += quantidade;
     }
     
-    public void sacar(int quantidade){
+    public void sacar(float quantidade){
         if(reais < quantidade){
             System.out.println("Saldo insuficiente");
         } else {

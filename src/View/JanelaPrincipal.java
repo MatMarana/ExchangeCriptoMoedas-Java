@@ -3,6 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
+import Controller.TelaPrincipalController;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+import javax.swing.JTextField;
 
 /**
  *
@@ -15,8 +21,331 @@ public class JanelaPrincipal extends javax.swing.JFrame {
      */
     public JanelaPrincipal() {
         initComponents();
+        controller = new TelaPrincipalController(this);
+    }
+    
+    public TelaPrincipalController getController() {
+        return controller;
     }
 
+    public void setController(TelaPrincipalController controller) {
+        this.controller = controller;
+    }
+
+    public JButton getjButtonAttCotacao() {
+        return jButtonAttCotacao;
+    }
+
+    public void setjButtonAttCotacao(JButton jButtonAttCotacao) {
+        this.jButtonAttCotacao = jButtonAttCotacao;
+    }
+
+    public JButton getjButtonComprarBtc() {
+        return jButtonComprarBtc;
+    }
+
+    public void setjButtonComprarBtc(JButton jButtonComprarBtc) {
+        this.jButtonComprarBtc = jButtonComprarBtc;
+    }
+
+    public JButton getjButtonComprarEtr() {
+        return jButtonComprarEtr;
+    }
+
+    public void setjButtonComprarEtr(JButton jButtonComprarEtr) {
+        this.jButtonComprarEtr = jButtonComprarEtr;
+    }
+
+    public JButton getjButtonComprarRpp() {
+        return jButtonComprarRpp;
+    }
+
+    public void setjButtonComprarRpp(JButton jButtonComprarRpp) {
+        this.jButtonComprarRpp = jButtonComprarRpp;
+    }
+
+    public JButton getjButtonDepositar() {
+        return jButtonDepositar;
+    }
+
+    public void setjButtonDepositar(JButton jButtonDepositar) {
+        this.jButtonDepositar = jButtonDepositar;
+    }
+
+    public JButton getjButtonGerarExtrato() {
+        return jButtonGerarExtrato;
+    }
+
+    public void setjButtonGerarExtrato(JButton jButtonGerarExtrato) {
+        this.jButtonGerarExtrato = jButtonGerarExtrato;
+    }
+
+    public JButton getjButtonSacar() {
+        return jButtonSacar;
+    }
+
+    public void setjButtonSacar(JButton jButtonSacar) {
+        this.jButtonSacar = jButtonSacar;
+    }
+
+    public JButton getjButtonVenderBTc() {
+        return jButtonVenderBTc;
+    }
+
+    public void setjButtonVenderBTc(JButton jButtonVenderBTc) {
+        this.jButtonVenderBTc = jButtonVenderBTc;
+    }
+
+    public JButton getjButtonVenderEtr() {
+        return jButtonVenderEtr;
+    }
+
+    public void setjButtonVenderEtr(JButton jButtonVenderEtr) {
+        this.jButtonVenderEtr = jButtonVenderEtr;
+    }
+
+    public JButton getjButtonVenderRipple() {
+        return jButtonVenderRipple;
+    }
+
+    public void setjButtonVenderRipple(JButton jButtonVenderRipple) {
+        this.jButtonVenderRipple = jButtonVenderRipple;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel11() {
+        return jLabel11;
+    }
+
+    public void setjLabel11(JLabel jLabel11) {
+        this.jLabel11 = jLabel11;
+    }
+
+    public JLabel getjLabel12() {
+        return jLabel12;
+    }
+
+    public void setjLabel12(JLabel jLabel12) {
+        this.jLabel12 = jLabel12;
+    }
+
+    public JLabel getjLabel13() {
+        return jLabel13;
+    }
+
+    public void setjLabel13(JLabel jLabel13) {
+        this.jLabel13 = jLabel13;
+    }
+
+    public JLabel getjLabel14() {
+        return jLabel14;
+    }
+
+    public void setjLabel14(JLabel jLabel14) {
+        this.jLabel14 = jLabel14;
+    }
+
+    public JLabel getjLabel15() {
+        return jLabel15;
+    }
+
+    public void setjLabel15(JLabel jLabel15) {
+        this.jLabel15 = jLabel15;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public void setjLabel5(JLabel jLabel5) {
+        this.jLabel5 = jLabel5;
+    }
+
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public void setjLabel6(JLabel jLabel6) {
+        this.jLabel6 = jLabel6;
+    }
+
+    public JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public void setjLabel7(JLabel jLabel7) {
+        this.jLabel7 = jLabel7;
+    }
+
+    public JLabel getjLabelValorBtc() {
+        return jLabelValorBtc;
+    }
+
+    public void setjLabelValorBtc(JLabel jLabelValorBtc) {
+        this.jLabelValorBtc = jLabelValorBtc;
+    }
+
+    public JLabel getjLabelValorEtr() {
+        return jLabelValorEtr;
+    }
+
+    public void setjLabelValorEtr(JLabel jLabelValorEtr) {
+        this.jLabelValorEtr = jLabelValorEtr;
+    }
+
+    public JLabel getjLabelValorRpp() {
+        return jLabelValorRpp;
+    }
+
+    public void setjLabelValorRpp(JLabel jLabelValorRpp) {
+        this.jLabelValorRpp = jLabelValorRpp;
+    }
+
+    public JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    public void setjPanel1(JPanel jPanel1) {
+        this.jPanel1 = jPanel1;
+    }
+
+    public JPanel getjPanel2() {
+        return jPanel2;
+    }
+
+    public void setjPanel2(JPanel jPanel2) {
+        this.jPanel2 = jPanel2;
+    }
+
+    public JPanel getjPanel3() {
+        return jPanel3;
+    }
+
+    public void setjPanel3(JPanel jPanel3) {
+        this.jPanel3 = jPanel3;
+    }
+
+    public JPanel getjPanel4() {
+        return jPanel4;
+    }
+
+    public void setjPanel4(JPanel jPanel4) {
+        this.jPanel4 = jPanel4;
+    }
+
+    public JPanel getjPanel5() {
+        return jPanel5;
+    }
+
+    public void setjPanel5(JPanel jPanel5) {
+        this.jPanel5 = jPanel5;
+    }
+
+    public JTabbedPane getjTabbedPane2() {
+        return jTabbedPane2;
+    }
+
+    public void setjTabbedPane2(JTabbedPane jTabbedPane2) {
+        this.jTabbedPane2 = jTabbedPane2;
+    }
+
+    public JTextField getjTextFieldComprarBtc() {
+        return jTextFieldComprarBtc;
+    }
+
+    public void setjTextFieldComprarBtc(JTextField jTextFieldComprarBtc) {
+        this.jTextFieldComprarBtc = jTextFieldComprarBtc;
+    }
+
+    public JTextField getjTextFieldComprarEtr() {
+        return jTextFieldComprarEtr;
+    }
+
+    public void setjTextFieldComprarEtr(JTextField jTextFieldComprarEtr) {
+        this.jTextFieldComprarEtr = jTextFieldComprarEtr;
+    }
+
+    public JTextField getjTextFieldComprarRpp() {
+        return jTextFieldComprarRpp;
+    }
+
+    public void setjTextFieldComprarRpp(JTextField jTextFieldComprarRpp) {
+        this.jTextFieldComprarRpp = jTextFieldComprarRpp;
+    }
+
+    public JTextField getjTextFieldDeposito() {
+        return jTextFieldDeposito;
+    }
+
+    public void setjTextFieldDeposito(JTextField jTextFieldDeposito) {
+        this.jTextFieldDeposito = jTextFieldDeposito;
+    }
+
+    public JTextField getjTextFieldSaque() {
+        return jTextFieldSaque;
+    }
+
+    public void setjTextFieldSaque(JTextField jTextFieldSaque) {
+        this.jTextFieldSaque = jTextFieldSaque;
+    }
+
+    public JTextField getjTextFieldVenderBtc() {
+        return jTextFieldVenderBtc;
+    }
+
+    public void setjTextFieldVenderBtc(JTextField jTextFieldVenderBtc) {
+        this.jTextFieldVenderBtc = jTextFieldVenderBtc;
+    }
+
+    public JTextField getjTextFieldVenderEtr() {
+        return jTextFieldVenderEtr;
+    }
+
+    public void setjTextFieldVenderEtr(JTextField jTextFieldVenderEtr) {
+        this.jTextFieldVenderEtr = jTextFieldVenderEtr;
+    }
+
+    public JTextField getjTextFieldVenderRpp() {
+        return jTextFieldVenderRpp;
+    }
+
+    public void setjTextFieldVenderRpp(JTextField jTextFieldVenderRpp) {
+        this.jTextFieldVenderRpp = jTextFieldVenderRpp;
+    }
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,56 +357,56 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButtonDepositar = new javax.swing.JButton();
+        jButtonSacar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jButton7 = new javax.swing.JButton();
+        jTextFieldDeposito = new javax.swing.JTextField();
+        jTextFieldSaque = new javax.swing.JTextField();
+        jButtonGerarExtrato = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jButtonComprarBtc = new javax.swing.JButton();
+        jButtonComprarEtr = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        jButtonComprarRpp = new javax.swing.JButton();
+        jTextFieldComprarRpp = new javax.swing.JTextField();
+        jTextFieldComprarBtc = new javax.swing.JTextField();
+        jTextFieldComprarEtr = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        jButtonVenderBTc = new javax.swing.JButton();
+        jButtonVenderEtr = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jButton10 = new javax.swing.JButton();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        jButtonVenderRipple = new javax.swing.JButton();
+        jTextFieldVenderRpp = new javax.swing.JTextField();
+        jTextFieldVenderBtc = new javax.swing.JTextField();
+        jTextFieldVenderEtr = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
+        jButtonAttCotacao = new javax.swing.JButton();
+        jLabelValorEtr = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jLabelValorBtc = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        jLabelValorRpp = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton1.setText("Depositar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonDepositar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButtonDepositar.setText("Depositar");
+        jButtonDepositar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonDepositarActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton2.setText("Sacar");
+        jButtonSacar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButtonSacar.setText("Sacar");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Digite o valor a ser depositado:");
@@ -85,21 +414,26 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel2.setText("Digite o valor a ser sacado: ");
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldDeposito.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jTextFieldDeposito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jTextFieldDepositoActionPerformed(evt);
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(255, 255, 255));
-        jButton7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jButton7.setText("Gerar Extrato");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldSaque.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jTextFieldSaque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                jTextFieldSaqueActionPerformed(evt);
+            }
+        });
+
+        jButtonGerarExtrato.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonGerarExtrato.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jButtonGerarExtrato.setText("Gerar Extrato");
+        jButtonGerarExtrato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGerarExtratoActionPerformed(evt);
             }
         });
 
@@ -114,16 +448,16 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                     .addComponent(jLabel1))
                 .addGap(36, 36, 36)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 561, Short.MAX_VALUE)
-                    .addComponent(jTextField1))
+                    .addComponent(jTextFieldSaque, javax.swing.GroupLayout.DEFAULT_SIZE, 561, Short.MAX_VALUE)
+                    .addComponent(jTextFieldDeposito))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButtonDepositar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonSacar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(46, 46, 46))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton7)
+                .addComponent(jButtonGerarExtrato)
                 .addGap(286, 286, 286))
         );
         jPanel1Layout.setVerticalGroup(
@@ -132,23 +466,23 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(jTextFieldDeposito, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonDepositar))
                 .addGap(106, 106, 106)
-                .addComponent(jButton7)
+                .addComponent(jButtonGerarExtrato)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2))
+                    .addComponent(jTextFieldSaque, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonSacar))
                 .addGap(59, 59, 59))
         );
 
         jTabbedPane2.addTab("tab1", jPanel1);
 
-        jButton3.setText("Comprar BitCoin");
+        jButtonComprarBtc.setText("Comprar BitCoin");
 
-        jButton4.setText("Comprar Etherium");
+        jButtonComprarEtr.setText("Comprar Etherium");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel3.setText("Digite a quantidade de Bitcoins:");
@@ -159,17 +493,17 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel11.setText("DIgite a quantidade de Etheruims");
 
-        jButton5.setText("Comprar Ripple");
+        jButtonComprarRpp.setText("Comprar Ripple");
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldComprarRpp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                jTextFieldComprarRppActionPerformed(evt);
             }
         });
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldComprarBtc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                jTextFieldComprarBtcActionPerformed(evt);
             }
         });
 
@@ -189,14 +523,14 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                         .addComponent(jLabel11)))
                 .addGap(58, 58, 58)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldComprarEtr, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldComprarRpp, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldComprarBtc, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
-                    .addComponent(jButton5)
-                    .addComponent(jButton4))
+                    .addComponent(jButtonComprarBtc)
+                    .addComponent(jButtonComprarRpp)
+                    .addComponent(jButtonComprarEtr))
                 .addGap(39, 90, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -204,14 +538,14 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
+                    .addComponent(jButtonComprarBtc)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldComprarBtc, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jButton5)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonComprarRpp)
+                    .addComponent(jTextFieldComprarRpp, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(143, 143, 143)
@@ -220,16 +554,16 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton4))
+                            .addComponent(jTextFieldComprarEtr, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonComprarEtr))
                         .addGap(55, 55, 55))))
         );
 
         jTabbedPane2.addTab("tab2", jPanel2);
 
-        jButton8.setText("Veneder  BitCoin");
+        jButtonVenderBTc.setText("Vender  BitCoin");
 
-        jButton9.setText("Vender Etherium");
+        jButtonVenderEtr.setText("Vender Etherium");
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel13.setText("Digite a quantidade de Bitcoins:");
@@ -240,17 +574,17 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel15.setText("DIgite a quantidade de Etheruims: ");
 
-        jButton10.setText("Vender Ripple");
+        jButtonVenderRipple.setText("Vender Ripple");
 
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldVenderRpp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                jTextFieldVenderRppActionPerformed(evt);
             }
         });
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldVenderBtc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                jTextFieldVenderBtcActionPerformed(evt);
             }
         });
 
@@ -268,16 +602,16 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldVenderRpp, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldVenderEtr, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(103, 103, 103)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton10)
-                            .addComponent(jButton9)))
+                            .addComponent(jButtonVenderRipple)
+                            .addComponent(jButtonVenderEtr)))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldVenderBtc, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(104, 104, 104)
-                        .addComponent(jButton8)))
+                        .addComponent(jButtonVenderBTc)))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -285,23 +619,23 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton8)
+                    .addComponent(jButtonVenderBTc)
                     .addComponent(jLabel13)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldVenderBtc, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(jButton10)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonVenderRipple)
+                    .addComponent(jTextFieldVenderRpp, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(151, 151, 151)
-                        .addComponent(jButton9)
+                        .addComponent(jButtonVenderEtr)
                         .addGap(62, 62, 62))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldVenderEtr, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel15))
                         .addGap(64, 64, 64))))
         );
@@ -329,28 +663,28 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("tab3", jPanel4);
 
-        jButton6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton6.setText("Atualizar Cotação");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAttCotacao.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButtonAttCotacao.setText("Atualizar Cotação");
+        jButtonAttCotacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                jButtonAttCotacaoActionPerformed(evt);
             }
         });
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel8.setText("valor");
+        jLabelValorEtr.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabelValorEtr.setText("valor");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel4.setText("BitCoins:");
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel9.setText("valor");
+        jLabelValorBtc.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabelValorBtc.setText("valor");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel5.setText("Etherium");
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel10.setText("valor");
+        jLabelValorRpp.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabelValorRpp.setText("valor");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel6.setText("Ripple");
@@ -367,19 +701,19 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
+                        .addComponent(jLabelValorBtc)
                         .addGap(14, 14, 14))
-                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(jLabelValorEtr, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel10)
+                .addComponent(jLabelValorRpp)
                 .addGap(49, 49, 49))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addComponent(jButton6)
+                .addComponent(jButtonAttCotacao)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -388,17 +722,17 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addGap(114, 114, 114)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jLabel8))
+                    .addComponent(jLabelValorEtr))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jLabel9))
+                    .addComponent(jLabelValorBtc))
                 .addGap(132, 132, 132)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jLabel10))
+                    .addComponent(jLabelValorRpp))
                 .addGap(44, 44, 44)
-                .addComponent(jButton6)
+                .addComponent(jButtonAttCotacao)
                 .addGap(86, 86, 86))
         );
 
@@ -438,37 +772,41 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void jButtonAttCotacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAttCotacaoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_jButtonAttCotacaoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonDepositarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDepositarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonDepositarActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jTextFieldSaqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldSaqueActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jTextFieldSaqueActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void jButtonGerarExtratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGerarExtratoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_jButtonGerarExtratoActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void jTextFieldComprarBtcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldComprarBtcActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_jTextFieldComprarBtcActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void jTextFieldComprarRppActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldComprarRppActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_jTextFieldComprarRppActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void jTextFieldVenderRppActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldVenderRppActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_jTextFieldVenderRppActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void jTextFieldVenderBtcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldVenderBtcActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_jTextFieldVenderBtcActionPerformed
+
+    private void jTextFieldDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDepositoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDepositoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -504,20 +842,21 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
     }
-
+    
+    TelaPrincipalController controller;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton jButtonAttCotacao;
+    private javax.swing.JButton jButtonComprarBtc;
+    private javax.swing.JButton jButtonComprarEtr;
+    private javax.swing.JButton jButtonComprarRpp;
+    private javax.swing.JButton jButtonDepositar;
+    private javax.swing.JButton jButtonGerarExtrato;
+    private javax.swing.JButton jButtonSacar;
+    private javax.swing.JButton jButtonVenderBTc;
+    private javax.swing.JButton jButtonVenderEtr;
+    private javax.swing.JButton jButtonVenderRipple;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -529,21 +868,22 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelValorBtc;
+    private javax.swing.JLabel jLabelValorEtr;
+    private javax.swing.JLabel jLabelValorRpp;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextFieldComprarBtc;
+    private javax.swing.JTextField jTextFieldComprarEtr;
+    private javax.swing.JTextField jTextFieldComprarRpp;
+    private javax.swing.JTextField jTextFieldDeposito;
+    private javax.swing.JTextField jTextFieldSaque;
+    private javax.swing.JTextField jTextFieldVenderBtc;
+    private javax.swing.JTextField jTextFieldVenderEtr;
+    private javax.swing.JTextField jTextFieldVenderRpp;
     // End of variables declaration//GEN-END:variables
 }
