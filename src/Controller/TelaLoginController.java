@@ -3,10 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Controller;
+import DAO.Conexao;
 import View.TelaLogin;
 import View.JanelaPrincipal;
 import Model.Investidor;
-
+import java.sql.Connection;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import DAO.InvestidorDAO;
+import java.sql.ResultSet;
 
 /**
  *
@@ -24,13 +29,32 @@ public class TelaLoginController {
         this.view = view;
     }
     
-    public void chamaJanela(){
-        JanelaPrincipal janela = new JanelaPrincipal();
-        janela.setVisible(true);
-    }
     
-    public void fechaJanela(){
-        view.setVisible(false);
+    public void consultarInvestidor(){
+        String cpf = view.getjTextField1().getText();
+        String senha = view.getjTextField2().getText();
+        Investidor investidor = new Investidor(cpf,senha);
+        Conexao conn = new Conexao();
+        
+        try(Connection connection = conn.getConnection()){
+            InvestidorDAO dao = new InvestidorDAO(connection);
+            try(ResultSet resultado = dao.consultar(investidor)){
+                if(resultado.next()){
+                    JOptionPane.showMessageDialog(view,"Login Feito com Sucesso", "Login Feito!",
+                        JOptionPane.INFORMATION_MESSAGE);
+                    JanelaPrincipal janela = new JanelaPrincipal();
+                    janela.setVisible(true);
+                    view.setVisible(false);
+                } else {
+                    JOptionPane.showMessageDialog(view,"Cpf ou senha Incorretos", "Login Feito!",
+                        JOptionPane.INFORMATION_MESSAGE);
+                }
+            }
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(view,"Erro de Conexão", "Erro!", JOptionPane.ERROR_MESSAGE);
+            
+        }
+        
     }
     
 }

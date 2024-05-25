@@ -13,7 +13,7 @@ import java.sql.SQLException;
 public class Conexao {
     public Connection getConnection() throws SQLException{
         Connection conexao = DriverManager.getConnection(
-            "jdbc:postgresql://localhost:5433","postegres","123456"
+            "jdbc:postgresql://localhost:5432/postgres","postgres","123456"
         );
         return conexao;     
     }

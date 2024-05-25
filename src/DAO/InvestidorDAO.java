@@ -21,7 +21,7 @@ public class InvestidorDAO {
     }
     
     public void inserir(Investidor investidor) throws SQLException{
-        String sql = "INSERT INTO alunos(nome,cpf,senha) " + "values('" + investidor.getNome()
+        String sql = "INSERT INTO investidor(cpf,nome,senha) " + "values('" + investidor.getNome()
                 +"', '" + investidor.getCpf() + "', '" + investidor.getSenha() + "')";
         PreparedStatement statement = conn.prepareStatement(sql);
         statement.execute();
@@ -29,7 +29,7 @@ public class InvestidorDAO {
     }
     
     public ResultSet consultar(Investidor investidor) throws SQLException{
-        String sql = "SELECT * FROM alunos WHERE usuario = ? AND senha = ?";
+        String sql = "SELECT * FROM investidor WHERE cpf = ? AND senha = ?";
         PreparedStatement statement = conn.prepareStatement(sql);
         statement.setString(1,investidor.getCpf());
         statement.setString(2,investidor.getSenha());

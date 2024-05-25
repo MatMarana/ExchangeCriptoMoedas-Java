@@ -7,6 +7,8 @@ import View.JanelaPrincipal;
 import Controller.TelaLoginController;
 import javax.swing.JOptionPane;
 import Model.Investidor;
+import javax.swing.JButton;
+import javax.swing.JTextField;
 /**
  *
  * @author unifmassuena
@@ -126,8 +128,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        controller.chamaJanela();
-        controller.fechaJanela();
+        controller.consultarInvestidor();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -169,13 +170,32 @@ public class TelaLogin extends javax.swing.JFrame {
         });
     }
   
-    public String getCpf(){
-        return jTextField1.getText();
+
+    public JButton getjButton1() {
+        return jButton1;
+    }
+
+    public void setjButton1(JButton jButton1) {
+        this.jButton1 = jButton1;
+    }
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public void setjTextField1(JTextField jTextField1) {
+        this.jTextField1 = jTextField1;
+    }
+
+    public JTextField getjTextField2() {
+        return jTextField2;
+    }
+
+    public void setjTextField2(JTextField jTextField2) {
+        this.jTextField2 = jTextField2;
     }
     
-    public String getSenha(){
-        return jTextField2.getText();
-    }
+    
     
     TelaLoginController controller;
 

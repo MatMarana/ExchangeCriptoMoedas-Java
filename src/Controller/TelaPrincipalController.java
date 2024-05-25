@@ -90,25 +90,25 @@ public class TelaPrincipalController {
     
     public void alteraValorEtr(){
         float novoValor = etherium.cotacaoEtherium();
-        String valor = novoValor + "" ;
+        String valor = "R$" + novoValor + "" ;
         view.getjLabelValorEtr().setText(valor);
     }
     
     public void alteraValorRipple(){
         float novoValor = ripple.cotacaoRipple();
-        String valor = novoValor + "" ;
+        String valor = "R$" + novoValor + "" ;
         view.getjLabelValorRpp().setText(valor);
     }
     
     public void alteraValorBitcoin(){
         float novoValor = bitcoin.cotacaoBitCoin();
-        String valor = novoValor + "" ;
+        String valor = "R$" + novoValor + "" ;
         view.getjLabelValorBtc().setText(valor);
     }
     
     public void alteraSaldo(){
         float quantidade = real.getReais();
-        String quantidade2 = quantidade + "";
+        String quantidade2 = "R$" + quantidade + "";
         view.getjLabelSaldoValor().setText(quantidade2);
         
     }

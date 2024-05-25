@@ -38,15 +38,15 @@ public class BitCoin extends Moedas{
     }
     
     public void comprarBitCoin(int quantidade){
-        JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showInputDialog(null,"Digite sua senha","Alerta",JOptionPane.INFORMATION_MESSAGE);
         quantidadeMoeda = quantidadeMoeda + quantidade;
     }
     
     public void venderBitCoin(int quantidade){
-        JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showInputDialog(null,"Digite sua senha","Alerta",JOptionPane.INFORMATION_MESSAGE);
         if(quantidadeMoeda < quantidade){
             System.out.println("Quantidade de BitCoins insuficiente");
-            JOptionPane.showMessageDialog(null, "Alerta","Quantidade de BitCoins insuficiente",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Quantidade de Bitcoins Insuficiente","Alerta",JOptionPane.ERROR_MESSAGE);
         } else {
             quantidadeMoeda -= quantidade;
         }

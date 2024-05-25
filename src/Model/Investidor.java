@@ -41,9 +41,14 @@ public class Investidor {
         this.cpf = cpf;
         this.senha = senha;
         this.nome = nome;
-        Carteira carteira = new Carteira(0);
     }
 
+    public Investidor(String cpf, String senha) {
+        this.cpf = cpf;
+        this.senha = senha;
+    }
+
+    
     public Investidor() {
     }
     
