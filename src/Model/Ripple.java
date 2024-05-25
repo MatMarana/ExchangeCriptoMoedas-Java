@@ -13,48 +13,51 @@ import javax.swing.JOptionPane;
  */
 public class Ripple extends Moedas {
     
-    private int quantidadeMoeda;
-    private float cotacaoMoeda;
+    private float ripple;
 
-    public int getQuantidadeMoeda() {
-        return quantidadeMoeda;
+    public float getQuantidadeMoeda() {
+        return ripple;
     }
 
     public void setQuantidadeMoeda(int quantidadeMoeda) {
-        this.quantidadeMoeda = quantidadeMoeda;
+        this.ripple = quantidadeMoeda;
     }
 
     public float getCotacaoMoeda() {
-        return cotacaoMoeda;
+        return valorRipple;
     }
 
     public void setCotacaoMoeda(float cotacaoMoeda) {
-        this.cotacaoMoeda = cotacaoMoeda;
+        this.valorRipple = cotacaoMoeda;
     }
     
     public float cotacaoRipple(){
         Random number = new Random();
-        cotacaoMoeda = number.nextFloat(5,1000);
-        return cotacaoMoeda;
+        float valorAnterior = valorRipple;
+        float variacao = (number.nextFloat() - 0.5f) * 0.1f;
+        valorRipple = valorAnterior * (1 + variacao);
+        System.out.println(valorRipple);
+        return valorRipple;
     }
     
-    public void comprarRipple(int quantidade){
-        JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
-        quantidadeMoeda += quantidade;
+    public float comprarRipple(float reaisGastos){
+        ripple += reaisGastos / valorRipple;
+        return ripple;
     }
     
-    public void venderRipple(int quantidade){
-        JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
-        if(quantidadeMoeda < quantidade){
-            System.out.println("Quantidade de Ripples insuficiente");
+    public float venderRipple(float quantidade){
+        if(ripple < quantidade){
+            JOptionPane.showMessageDialog(null, 
+                    "Quantidade de Bitcoins Insuficiente","Alerta",JOptionPane.ERROR_MESSAGE);
         } else {
-            quantidadeMoeda -= quantidade;
+            ripple -= quantidade;
         }
+        return ripple;
     } 
 
     public Ripple(int quantidadeMoeda, float cotacaoMoeda) {
         super(quantidadeMoeda, cotacaoMoeda, "ripple");
-        this.quantidadeMoeda = quantidadeMoeda;
+        this.ripple = quantidadeMoeda;
     }
 
     public Ripple() {

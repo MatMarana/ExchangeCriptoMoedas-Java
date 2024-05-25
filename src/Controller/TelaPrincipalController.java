@@ -8,7 +8,7 @@ import Model.Real;
 import Model.BitCoin;
 import Model.Etherium;
 import Model.Ripple;
-import javax.swing.JLabel;
+
 
 /**
  *
@@ -28,63 +28,74 @@ public class TelaPrincipalController {
     public void deposito(){
         String valorDepositado = view.getjTextFieldDeposito().getText();
         float valorDepositoConvertido = Float.valueOf(valorDepositado);
-        
         real.depositar(valorDepositoConvertido);
-        
     }
     
     public void saque(){
         String valorSaque = view.getjTextFieldSaque().getText();
         float valorSacado = Float.valueOf(valorSaque);
-        
         real.sacar(valorSacado);
     }
     
     public void venderBitcoin(){
         String quantidadeVendida = view.getjTextFieldVenderBtc().getText();
-        int quantidadeBitcoin = Integer.valueOf(quantidadeVendida);
+        float quantidadeBitcoin = Float.valueOf(quantidadeVendida);
+        String bitcoins = bitcoin.venderBitCoin(quantidadeBitcoin) + "";
+        String reais = "R$" +real.venderBitcoin() + "";
+        view.getjLabelBtcValor().setText(bitcoins);
+        view.getjLabelSaldoValor().setText(reais);
         
-        bitcoin.venderBitCoin(quantidadeBitcoin);
         
     }
     
     public void comprarBitcoin(){
-        String quantidadeComprada = view.getjTextFieldVenderBtc().getText();
-        int quantidadeBitcoin = Integer.valueOf(quantidadeComprada);
+        String quantidadeComprada = view.getjTextFieldComprarBtc().getText();
+        float quantidade = Float.valueOf(quantidadeComprada);
+        String reais = "R$" +  real.comprarBitcoin(quantidade) + "";
+        String bitcoins = bitcoin.comprarBitCoin(quantidade) + "";
+        view.getjLabelBtcValor().setText(bitcoins);
+        view.getjLabelSaldoValor().setText(reais);
         
-        bitcoin.comprarBitCoin(quantidadeBitcoin);
         
     }
     
      public void venderRipple(){
         String quantidadeVendida = view.getjTextFieldVenderRpp().getText();
-        int quantidadeRipple = Integer.valueOf(quantidadeVendida);
-        
-        ripple.venderRipple(quantidadeRipple);
+        float quantidadeRipple = Float.valueOf(quantidadeVendida);
+        String ripples = ripple.venderRipple(quantidadeRipple) + "";
+        String reais = "R$" +real.venderRipple() + "";
+        view.getjLabelBtcValor().setText(ripples);
+        view.getjLabelSaldoValor().setText(reais);
         
     }
     
     public void comprarRipple(){
-        String quantidadeComprada = view.getjTextFieldVenderRpp().getText();
-        int quantidadeRipple = Integer.valueOf(quantidadeComprada);
-        
-        ripple.comprarRipple(quantidadeRipple);
+        String quantidadeComprada = view.getjTextFieldComprarRpp().getText();
+        float quantidade = Float.valueOf(quantidadeComprada);
+        String reais = "R$" +  real.comprarRipple(quantidade) + "";
+        String ripples = ripple.comprarRipple(quantidade) + "";
+        view.getjLabelRppValor1().setText(ripples);
+        view.getjLabelSaldoValor().setText(reais);
         
     }
     
      public void venderEtherium(){
         String quantidadeVendida = view.getjTextFieldVenderEtr().getText();
-        int quantidadeEtherium = Integer.valueOf(quantidadeVendida);
-        
-        etherium.venderEtherium(quantidadeEtherium);
+        float quantidadeEtherium = Float.valueOf(quantidadeVendida);
+        String etheriums = etherium.venderEtherium(quantidadeEtherium) + "";
+        String reais = "R$" +real.venderEtherium() + "";
+        view.getjLabelBtcValor().setText(etheriums);
+        view.getjLabelSaldoValor().setText(reais);
         
     }
     
     public void comprarEtherium(){
-        String quantidadeComprada = view.getjTextFieldVenderEtr().getText();
-        int quantidadeEtherium = Integer.valueOf(quantidadeComprada);
-        
-        etherium.comprarEtherium(quantidadeEtherium);
+        String quantidadeComprada = view.getjTextFieldComprarEtr().getText();
+        float quantidade = Float.valueOf(quantidadeComprada);
+        String reais = "R$" +  real.comprarEtherium(quantidade) + "";
+        String etheriums = etherium.comprarEtherium(quantidade) + "";
+        view.getjLabelBtcValor().setText(etheriums);
+        view.getjLabelSaldoValor().setText(reais);
         
     }
     
@@ -113,20 +124,10 @@ public class TelaPrincipalController {
         
     }
     
+    
     public void gerarExtrato(){
         
     }
     
-    public void alteraSaldoBtc(){
-        
-    }
-    
-    public void alteraSaldoRpp(){
-        
-    }
-    
-    public void alteraSaldoEtr(){
-        
-    }
     
 }

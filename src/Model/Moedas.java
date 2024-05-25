@@ -9,46 +9,43 @@ package Model;
  * @author unifmassuena
  */
 public class Moedas {
-    private int bitcoins;
-    private float valorBitcoins;
-    private float bitcoinsReal;
-    private int ripple;
-    private float valorRipple;
-    private float rippleReal;
-    private int etherium;
-    private float valorEtherium;
-    private float etheriumReal;
-    private float real;
+    private float bitcoins;
+    protected float valorBitcoins = 100;
+    private float ripple;
+    protected float valorRipple = 30;
+    private float etherium;
+    protected float valorEtherium = 70;
+    private double real;
 
-    public int getBitcoins() {
+    public float getBitcoins() {
         return bitcoins;
     }
 
-    public void setBitcoins(int bitcoins) {
+    public void setBitcoins(float bitcoins) {
         this.bitcoins = bitcoins;
     }
 
-    public int getRipple() {
+    public float getRipple() {
         return ripple;
     }
 
-    public void setRipple(int ripple) {
+    public void setRipple(float ripple) {
         this.ripple = ripple;
     }
 
-    public int getEtherium() {
+    public float getEtherium() {
         return etherium;
     }
 
-    public void setEtherium(int etherium) {
+    public void setEtherium(float etherium) {
         this.etherium = etherium;
     }
 
-    public float getReal() {
+    public double getReal() {
         return real;
     }
 
-    public void setReal(int real) {
+    public void setReal(double real) {
         this.real = real;
     }
 
@@ -76,49 +73,21 @@ public class Moedas {
         this.valorEtherium = saldoEtherium;
     }
 
-    public float getBitcoinsReal() {
-        return bitcoinsReal;
-    }
-
-    public void setBitcoinsReal(float bitcoinsReal) {
-        this.bitcoinsReal = bitcoinsReal;
-    }
-
-    public float getRippleReal() {
-        return rippleReal;
-    }
-
-    public void setRippleReal(float rippleReal) {
-        this.rippleReal = rippleReal;
-    }
-
-    public float getEtheriumReal() {
-        return etheriumReal;
-    }
-
-    public void setEtheriumReal(float etheriumReal) {
-        this.etheriumReal = etheriumReal;
-    }
-    
     
 
-    public Moedas(int moeda, float saldo, String tipoMoedas) {
+    public Moedas(float moeda, float saldo, String tipoMoedas) {
         if(tipoMoedas.equals("bitcoin")){
             this.bitcoins = moeda;
             this.valorBitcoins = saldo;
-            bitcoinsReal = bitcoins * valorBitcoins; 
         }
         if(tipoMoedas.equals("ripple")){
             this.ripple = moeda;
-            this.valorRipple = saldo;
-            rippleReal = ripple * valorRipple;
+            this.valorRipple = saldo; 
             
         }
         if(tipoMoedas.equals("etherium")){
             this.etherium = moeda;
-            this.valorEtherium = saldo;
-            etheriumReal = etherium * valorEtherium;
-            
+            this.valorEtherium = saldo;            
         }
     } 
 

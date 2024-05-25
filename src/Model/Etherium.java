@@ -11,49 +11,50 @@ import javax.swing.JOptionPane;
  * @author unifmassuena
  */
 public class Etherium extends Moedas {
-    private int quantidadeMoeda = 0;
-    private float cotacaoMoeda = 0;
+    private float etherium;
 
-    public int getQuantidadeMoeda() {
-        return quantidadeMoeda;
+    public float getQuantidadeMoeda() {
+        return etherium;
     }
 
     public void setQuantidadeMoeda(int quantidadeMoeda) {
-        this.quantidadeMoeda = quantidadeMoeda;
+        this.etherium = quantidadeMoeda;
     }
 
     public float getCotacaoMoeda() {
-        return cotacaoMoeda;
+        return valorEtherium;
     }
 
     public void setCotacaoMoeda(float cotacaoMoeda) {
-        this.cotacaoMoeda = cotacaoMoeda;
+        this.valorEtherium = cotacaoMoeda;
     }
     
     public float cotacaoEtherium(){
         Random number = new Random();
-        cotacaoMoeda = number.nextFloat(5,1000);
-        System.out.println(cotacaoMoeda);
-        return cotacaoMoeda;
+        float valorAnterior = valorEtherium;
+        float variacao = (number.nextFloat() - 0.5f) * 0.1f;
+        valorEtherium = valorAnterior * (1 + variacao);
+        System.out.println(valorEtherium);
+        return valorEtherium;
     }
     
-    public void comprarEtherium(int quantidade){
-        JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
-        quantidadeMoeda += quantidade;
+    public float comprarEtherium(float reaisGastos){
+        etherium += reaisGastos / valorEtherium;
+        return etherium;
     }
     
-    public void venderEtherium(int quantidade){
-        JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
-        if(quantidadeMoeda < quantidade){
+    public float venderEtherium(float quantidade){
+        if(etherium < quantidade){
             System.out.println("Quantidade de Etheriums insuficiente");
         } else {
-            quantidadeMoeda -= quantidade;
+            etherium -= quantidade;
         }
+        return etherium;
     } 
 
     public Etherium(int quantidadeMoeda, float cotacaoMoeda) {
         super(quantidadeMoeda, cotacaoMoeda, "etherium");
-        this.quantidadeMoeda = quantidadeMoeda;
+        this.etherium = quantidadeMoeda;
     }
 
     public Etherium() {

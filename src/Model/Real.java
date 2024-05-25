@@ -27,13 +27,59 @@ public class Real extends Moedas{
     }
     
     public void sacar(float quantidade){
-        JOptionPane.showInputDialog(null,"Digite sua senha","Alerta",JOptionPane.INFORMATION_MESSAGE);
         if(reais < quantidade){
-            JOptionPane.showInputDialog(null,"Saldo Insuficiente","Alerta",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showInputDialog(null,
+                    "Saldo Insuficiente","Alerta",JOptionPane.INFORMATION_MESSAGE);
         } else {
             reais -= quantidade;
         }
     } 
+    
+    public float comprarBitcoin(float reaisGastos){
+        if(reais < reaisGastos){
+            JOptionPane.showInputDialog(null,
+                    "Saldo Insuficiente","Alerta",JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            reais -= reaisGastos + (reaisGastos * 0.02);
+        }
+        return reais;
+    }
+    
+    public float venderBitcoin(){
+        reais += valorBitcoins - (valorBitcoins * 0.03);
+        return reais;
+    }
+    
+    public float comprarRipple(float reaisGastos){
+        if(reais < reaisGastos){
+            JOptionPane.showInputDialog(null,
+                    "Saldo Insuficiente","Alerta",JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            reais -= reaisGastos + (reaisGastos * 0.01);
+        }
+        return reais;
+    }
+
+    public float venderRipple(){
+        reais += valorRipple - (valorRipple * 0.01);
+        return reais;
+    }
+    
+    public float comprarEtherium(float reaisGastos){
+        if(reais < reaisGastos){
+            JOptionPane.showInputDialog(null,
+                    "Saldo Insuficiente","Alerta",JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            reais -= reaisGastos + (reaisGastos * 0.01);
+        }
+        return reais;
+    }
+    
+    public float venderEtherium(){
+        reais += valorEtherium - (valorEtherium * 0.02);
+        return reais;
+    }
+
 
     public Real(float reais) {
         super(reais);

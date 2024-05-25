@@ -11,50 +11,35 @@ import javax.swing.JOptionPane;
  * @author unifmassuena
  */
 public class BitCoin extends Moedas{
-    private int quantidadeMoeda;
-    private float cotacaoMoeda;
-
-    public int getQuantidadeMoeda() {
-        return quantidadeMoeda;
-    }
-
-    public void setQuantidadeMoeda(int quantidadeMoeda) {
-        this.quantidadeMoeda = quantidadeMoeda;
-    }
-
-    public float getCotacaoMoeda() {
-        return cotacaoMoeda;
-    }
-
-    public void setCotacaoMoeda(float cotacaoMoeda) {
-        this.cotacaoMoeda = cotacaoMoeda;
-    }
+    private float bitcoins;
     
     public float cotacaoBitCoin(){
         Random number = new Random();
-        cotacaoMoeda = number.nextFloat(5,1000);
-        System.out.println(cotacaoMoeda);
-        return cotacaoMoeda;
+        float valorAnterior = valorBitcoins;
+        float variacao = (number.nextFloat() - 0.5f) * 0.1f;
+        valorBitcoins = valorAnterior * (1 + variacao);
+        System.out.println(valorBitcoins);
+        return valorBitcoins;
     }
     
-    public void comprarBitCoin(int quantidade){
-        JOptionPane.showInputDialog(null,"Digite sua senha","Alerta",JOptionPane.INFORMATION_MESSAGE);
-        quantidadeMoeda = quantidadeMoeda + quantidade;
+    public float comprarBitCoin(float reaisGastos){
+        bitcoins += reaisGastos / valorBitcoins;
+        return bitcoins;   
     }
     
-    public void venderBitCoin(int quantidade){
-        JOptionPane.showInputDialog(null,"Digite sua senha","Alerta",JOptionPane.INFORMATION_MESSAGE);
-        if(quantidadeMoeda < quantidade){
-            System.out.println("Quantidade de BitCoins insuficiente");
-            JOptionPane.showMessageDialog(null, "Quantidade de Bitcoins Insuficiente","Alerta",JOptionPane.ERROR_MESSAGE);
+    public float venderBitCoin(float quantidade){
+        if(bitcoins < quantidade){
+            JOptionPane.showMessageDialog(null, 
+                    "Quantidade de Bitcoins Insuficiente","Alerta",JOptionPane.ERROR_MESSAGE);
         } else {
-            quantidadeMoeda -= quantidade;
+            bitcoins = bitcoins - quantidade;
         }
+        return bitcoins;
     } 
-
+    
     public BitCoin(int quantidadeMoeda, float cotacaoMoeda) {
         super(quantidadeMoeda, cotacaoMoeda, "bitcoin");
-        this.quantidadeMoeda = quantidadeMoeda;
+        this.bitcoins = quantidadeMoeda;
     }
 
     public BitCoin() {

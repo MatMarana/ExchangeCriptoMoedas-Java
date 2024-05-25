@@ -515,10 +515,10 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jLabel12.setText("Etherium: ");
 
         jLabelBtcValor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabelBtcValor.setText("R$:0,00");
+        jLabelBtcValor.setText("0,00");
 
         jLabelRppValor1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabelRppValor1.setText("R$:0,00");
+        jLabelRppValor1.setText("0,00");
 
         jLabelEtrValor2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabelEtrValor2.setText("R$:0,00");
@@ -554,7 +554,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabelRppValor1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
                         .addComponent(jLabel12))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
