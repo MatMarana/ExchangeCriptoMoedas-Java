@@ -31,7 +31,9 @@ public class TelaCadastroController {
         
         JanelaPrincipal janela = new JanelaPrincipal();
         janela.setVisible(true);
-        
-        
+    }
+    
+    public void fechaJanela(){
+        view.setVisible(false);
     }
 }

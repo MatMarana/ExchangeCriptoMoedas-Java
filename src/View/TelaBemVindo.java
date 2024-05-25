@@ -16,6 +16,7 @@ public class TelaBemVindo extends javax.swing.JFrame {
      */
     public TelaBemVindo() {
         initComponents();
+        controller = new TelaBemVindoController(this);
     }
 
     /**
@@ -100,13 +101,15 @@ public class TelaBemVindo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        TelaBemVindoController cd = new TelaBemVindoController();
-        cd.ChamaLogin();
+        controller.fechaJanela();
+        controller.ChamaLogin();
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        TelaBemVindoController cd = new TelaBemVindoController();
-        cd.ChamaCadastro();
+        controller.fechaJanela();
+        controller.ChamaCadastro();
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -144,7 +147,9 @@ public class TelaBemVindo extends javax.swing.JFrame {
             }
         });
     }
-
+    
+    TelaBemVindoController controller;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

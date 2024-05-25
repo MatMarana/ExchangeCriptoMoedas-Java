@@ -10,6 +10,9 @@ package Model;
  */
 public class Carteira {
     private float saldo; // valor total de dinheiro na conta
+    private float saldoBtc;
+    private float saldoRipple;
+    private float saldoEtherium;
     private Moedas moedas = new Moedas();
 
     public float getSaldo() {
@@ -20,8 +23,24 @@ public class Carteira {
         this.saldo = saldo;
     }
     
-    public void calculaSaldo(){
+    public float calculaSaldo(){
         saldo = moedas.getBitcoinsReal() + moedas.getRippleReal() + moedas.getEtheriumReal() + moedas.getReal();
+        return saldo;
+    }
+    
+    public float saldoBtc(){
+        saldoBtc = moedas.getBitcoinsReal();
+        return saldoBtc;
+    }
+    
+    public float saldoRipple(){
+        saldoRipple = moedas.getRippleReal();
+        return saldoRipple;
+    }
+    
+    public float saldoEtherium(){
+        saldoEtherium = moedas.getEtheriumReal();
+        return saldoEtherium;
     }
     
     public Carteira(float saldo) {

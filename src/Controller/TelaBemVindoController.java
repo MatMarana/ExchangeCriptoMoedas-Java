@@ -12,7 +12,11 @@ import View.TelaCadastro;
  * @author unifmassuena
  */
 public class TelaBemVindoController {
-    private TelaBemVindo view = new TelaBemVindo();
+    private TelaBemVindo view;
+    
+    public TelaBemVindoController(TelaBemVindo view) {
+        this.view = view;
+    }
     
     public void setView(TelaBemVindo view){
         this.view = view;
@@ -25,6 +29,10 @@ public class TelaBemVindoController {
     public void ChamaCadastro(){
         TelaCadastro view = new TelaCadastro();
         view.setVisible(true);
+    }
+    
+    public void fechaJanela(){
+        view.setVisible(false);
     }
     
 }

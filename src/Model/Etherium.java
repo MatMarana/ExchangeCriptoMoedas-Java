@@ -4,14 +4,15 @@
  */
 package Model;
 import java.util.Random;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author unifmassuena
  */
 public class Etherium extends Moedas {
-    private int quantidadeMoeda;
-    private float cotacaoMoeda;
+    private int quantidadeMoeda = 0;
+    private float cotacaoMoeda = 0;
 
     public int getQuantidadeMoeda() {
         return quantidadeMoeda;
@@ -29,17 +30,20 @@ public class Etherium extends Moedas {
         this.cotacaoMoeda = cotacaoMoeda;
     }
     
-    public void cotacaoEtherium(){
+    public float cotacaoEtherium(){
         Random number = new Random();
-        float cotacaoMoeda = number.nextFloat();
+        cotacaoMoeda = number.nextFloat();
         System.out.println(cotacaoMoeda);
+        return cotacaoMoeda;
     }
     
     public void comprarEtherium(int quantidade){
+        JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
         quantidadeMoeda += quantidade;
     }
     
     public void venderEtherium(int quantidade){
+        JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
         if(quantidadeMoeda < quantidade){
             System.out.println("Quantidade de Etheriums insuficiente");
         } else {

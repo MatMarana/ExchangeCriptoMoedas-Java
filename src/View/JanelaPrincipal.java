@@ -128,13 +128,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         this.jLabel11 = jLabel11;
     }
 
-    public JLabel getjLabel12() {
-        return jLabel12;
-    }
-
-    public void setjLabel12(JLabel jLabel12) {
-        this.jLabel12 = jLabel12;
-    }
 
     public JLabel getjLabel13() {
         return jLabel13;
@@ -343,6 +336,15 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     public void setjTextFieldVenderRpp(JTextField jTextFieldVenderRpp) {
         this.jTextFieldVenderRpp = jTextFieldVenderRpp;
     }
+
+    public JLabel getjLabelSaldoValor() {
+        return jLabelSaldoValor;
+    }
+
+    public void setjLabelSaldoValor(JLabel jLabelSaldoValor) {
+        this.jLabelSaldoValor = jLabelSaldoValor;
+    }
+    
     
     
     
@@ -364,6 +366,8 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jTextFieldDeposito = new javax.swing.JTextField();
         jTextFieldSaque = new javax.swing.JTextField();
         jButtonGerarExtrato = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabelSaldoValor = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jButtonComprarBtc = new javax.swing.JButton();
         jButtonComprarEtr = new javax.swing.JButton();
@@ -376,15 +380,15 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jTextFieldComprarEtr = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jButtonVenderBTc = new javax.swing.JButton();
-        jButtonVenderEtr = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jButtonVenderRipple = new javax.swing.JButton();
         jTextFieldVenderRpp = new javax.swing.JTextField();
         jTextFieldVenderBtc = new javax.swing.JTextField();
         jTextFieldVenderEtr = new javax.swing.JTextField();
+        jButtonVenderBTc = new javax.swing.JButton();
+        jButtonVenderRipple = new javax.swing.JButton();
+        jButtonVenderEtr = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jButtonAttCotacao = new javax.swing.JButton();
         jLabelValorEtr = new javax.swing.JLabel();
@@ -393,11 +397,10 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabelValorRpp = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButtonDepositar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButtonDepositar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButtonDepositar.setText("Depositar");
         jButtonDepositar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -405,13 +408,18 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButtonSacar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButtonSacar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButtonSacar.setText("Sacar");
+        jButtonSacar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSacarActionPerformed(evt);
+            }
+        });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Digite o valor a ser depositado:");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setText("Digite o valor a ser sacado: ");
 
         jTextFieldDeposito.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -421,7 +429,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jTextFieldSaque.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jTextFieldSaque.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextFieldSaque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldSaqueActionPerformed(evt);
@@ -429,7 +437,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         });
 
         jButtonGerarExtrato.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonGerarExtrato.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jButtonGerarExtrato.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButtonGerarExtrato.setText("Gerar Extrato");
         jButtonGerarExtrato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -437,63 +445,97 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel8.setText("Saldo: ");
+
+        jLabelSaldoValor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelSaldoValor.setText("R$0,00");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
-                .addGap(36, 36, 36)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldSaque, javax.swing.GroupLayout.DEFAULT_SIZE, 561, Short.MAX_VALUE)
-                    .addComponent(jTextFieldDeposito))
+                .addGap(20, 20, 20)
+                .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButtonDepositar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonSacar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(46, 46, 46))
+                .addComponent(jTextFieldSaque)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonSacar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldDeposito, javax.swing.GroupLayout.DEFAULT_SIZE, 537, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonDepositar)
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonGerarExtrato)
-                .addGap(286, 286, 286))
+                .addGap(243, 243, 243))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addComponent(jLabel8)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelSaldoValor)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addGap(93, 93, 93)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldDeposito, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonDepositar))
-                .addGap(106, 106, 106)
-                .addComponent(jButtonGerarExtrato)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabelSaldoValor))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldDeposito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonDepositar))
+                .addGap(36, 36, 36)
+                .addComponent(jButtonGerarExtrato)
+                .addGap(49, 49, 49)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldSaque, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldSaque, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonSacar))
                 .addGap(59, 59, 59))
         );
 
-        jTabbedPane2.addTab("tab1", jPanel1);
+        jTabbedPane2.addTab("Menu", jPanel1);
 
         jButtonComprarBtc.setText("Comprar BitCoin");
+        jButtonComprarBtc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonComprarBtcActionPerformed(evt);
+            }
+        });
 
         jButtonComprarEtr.setText("Comprar Etherium");
+        jButtonComprarEtr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonComprarEtrActionPerformed(evt);
+            }
+        });
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel3.setText("Digite a quantidade de Bitcoins:");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel7.setText("Digite a quantidade de Ripples: ");
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel11.setText("DIgite a quantidade de Etheruims");
 
         jButtonComprarRpp.setText("Comprar Ripple");
+        jButtonComprarRpp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonComprarRppActionPerformed(evt);
+            }
+        });
 
         jTextFieldComprarRpp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -516,22 +558,27 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel7)))
+                            .addComponent(jLabel7)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(60, 60, 60)
+                                .addComponent(jTextFieldComprarBtc, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(jLabel11)))
-                .addGap(58, 58, 58)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldComprarEtr, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldComprarRpp, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldComprarBtc, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonComprarBtc)
-                    .addComponent(jButtonComprarRpp)
-                    .addComponent(jButtonComprarEtr))
-                .addGap(39, 90, Short.MAX_VALUE))
+                        .addComponent(jLabel11)
+                        .addGap(48, 48, 48)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextFieldComprarRpp, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
+                            .addComponent(jTextFieldComprarEtr))
+                        .addGap(29, 29, 29)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButtonComprarEtr)
+                                .addComponent(jButtonComprarRpp))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addComponent(jButtonComprarBtc)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -540,41 +587,30 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonComprarBtc)
                     .addComponent(jLabel3)
-                    .addComponent(jTextFieldComprarBtc, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
+                    .addComponent(jTextFieldComprarBtc, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(jButtonComprarRpp)
-                    .addComponent(jTextFieldComprarRpp, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(143, 143, 143)
-                        .addComponent(jLabel11)
-                        .addGap(65, 65, 65))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextFieldComprarEtr, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonComprarEtr))
-                        .addGap(55, 55, 55))))
+                    .addComponent(jTextFieldComprarRpp, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(121, 121, 121)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(jTextFieldComprarEtr, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonComprarEtr))
+                .addGap(40, 40, 40))
         );
 
-        jTabbedPane2.addTab("tab2", jPanel2);
+        jTabbedPane2.addTab("Compra de Moedas", jPanel2);
 
-        jButtonVenderBTc.setText("Vender  BitCoin");
-
-        jButtonVenderEtr.setText("Vender Etherium");
-
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel13.setText("Digite a quantidade de Bitcoins:");
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel14.setText("Digite a quantidade de Ripples: ");
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel15.setText("DIgite a quantidade de Etheruims: ");
-
-        jButtonVenderRipple.setText("Vender Ripple");
 
         jTextFieldVenderRpp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -588,80 +624,93 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButtonVenderBTc.setText("Vender BitCoin");
+        jButtonVenderBTc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVenderBTcActionPerformed(evt);
+            }
+        });
+
+        jButtonVenderRipple.setText("Vender Ripple");
+        jButtonVenderRipple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVenderRippleActionPerformed(evt);
+            }
+        });
+
+        jButtonVenderEtr.setText("Vender Etherium");
+        jButtonVenderEtr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVenderEtrActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel13))
-                .addGap(72, 72, 72)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextFieldVenderBtc))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldVenderEtr))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextFieldVenderRpp, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(35, 35, 35)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldVenderRpp, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldVenderEtr, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(103, 103, 103)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonVenderRipple)
-                            .addComponent(jButtonVenderEtr)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(jTextFieldVenderBtc, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(104, 104, 104)
-                        .addComponent(jButtonVenderBTc)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jButtonVenderRipple, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonVenderEtr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButtonVenderBTc))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonVenderBTc)
                     .addComponent(jLabel13)
-                    .addComponent(jTextFieldVenderBtc, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
+                    .addComponent(jTextFieldVenderBtc, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonVenderBTc))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(jButtonVenderRipple)
-                    .addComponent(jTextFieldVenderRpp, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(151, 151, 151)
-                        .addComponent(jButtonVenderEtr)
-                        .addGap(62, 62, 62))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextFieldVenderEtr, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15))
-                        .addGap(64, 64, 64))))
+                    .addComponent(jTextFieldVenderRpp, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonVenderRipple))
+                .addGap(145, 145, 145)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(jTextFieldVenderEtr, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonVenderEtr))
+                .addGap(40, 40, 40))
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1170, Short.MAX_VALUE)
-            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel4Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(474, 474, 474))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 571, Short.MAX_VALUE)
-            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel4Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("tab3", jPanel4);
+        jTabbedPane2.addTab("Venda de Moedas", jPanel4);
 
         jButtonAttCotacao.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButtonAttCotacao.setText("Atualizar Cotação");
@@ -671,40 +720,28 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jLabelValorEtr.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabelValorEtr.setText("valor");
+        jLabelValorEtr.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelValorEtr.setText("R$0,00");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setText("BitCoins:");
 
-        jLabelValorBtc.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabelValorBtc.setText("valor");
+        jLabelValorBtc.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelValorBtc.setText("R$0,00");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel5.setText("Etherium");
 
-        jLabelValorRpp.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabelValorRpp.setText("valor");
+        jLabelValorRpp.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelValorRpp.setText("R$0,00");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel6.setText("Ripple");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabelValorBtc)
-                        .addGap(14, 14, 14))
-                    .addComponent(jLabelValorEtr, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6)
@@ -712,22 +749,34 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabelValorRpp)
                 .addGap(49, 49, 49))
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jButtonAttCotacao)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(jButtonAttCotacao))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel4)
+                        .addGap(70, 70, 70)
+                        .addComponent(jLabelValorBtc))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabelValorEtr)))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(114, 114, 114)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jLabelValorEtr))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabelValorBtc))
-                .addGap(132, 132, 132)
+                .addGap(33, 33, 33)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jLabelValorRpp))
@@ -736,37 +785,28 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addGap(86, 86, 86))
         );
 
-        jLabel12.setText("jLabel12");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(jLabel12))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTabbedPane2)))
-                .addContainerGap())
+                .addContainerGap()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 918, Short.MAX_VALUE)
+                .addGap(56, 56, 56))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jLabel12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(155, 155, 155)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addComponent(jTabbedPane2)))
-                .addContainerGap())
+                        .addGap(66, 66, 66)
+                        .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 589, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         pack();
@@ -774,10 +814,15 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
     private void jButtonAttCotacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAttCotacaoActionPerformed
         // TODO add your handling code here:
+        controller.alteraValorBitcoin();
+        controller.alteraValorRipple();
+        controller.alteraValorEtr();
     }//GEN-LAST:event_jButtonAttCotacaoActionPerformed
 
     private void jButtonDepositarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDepositarActionPerformed
         // TODO add your handling code here:
+        controller.deposito();
+        controller.alteraSaldo();
     }//GEN-LAST:event_jButtonDepositarActionPerformed
 
     private void jTextFieldSaqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldSaqueActionPerformed
@@ -807,6 +852,42 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private void jTextFieldDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDepositoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDepositoActionPerformed
+
+    private void jButtonSacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSacarActionPerformed
+        // TODO add your handling code here:
+        controller.saque();
+        controller.alteraSaldo();
+    }//GEN-LAST:event_jButtonSacarActionPerformed
+
+    private void jButtonVenderBTcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVenderBTcActionPerformed
+        // TODO add your handling code here:
+        controller.venderBitcoin();
+    }//GEN-LAST:event_jButtonVenderBTcActionPerformed
+
+    private void jButtonVenderRippleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVenderRippleActionPerformed
+        // TODO add your handling code here:
+        controller.venderRipple();
+    }//GEN-LAST:event_jButtonVenderRippleActionPerformed
+
+    private void jButtonVenderEtrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVenderEtrActionPerformed
+        // TODO add your handling code here:
+        controller.venderEtherium();
+    }//GEN-LAST:event_jButtonVenderEtrActionPerformed
+
+    private void jButtonComprarBtcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonComprarBtcActionPerformed
+        // TODO add your handling code here:
+        controller.comprarBitcoin();
+    }//GEN-LAST:event_jButtonComprarBtcActionPerformed
+
+    private void jButtonComprarRppActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonComprarRppActionPerformed
+        // TODO add your handling code here:
+        controller.comprarRipple();
+    }//GEN-LAST:event_jButtonComprarRppActionPerformed
+
+    private void jButtonComprarEtrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonComprarEtrActionPerformed
+        // TODO add your handling code here:
+        controller.comprarEtherium();
+    }//GEN-LAST:event_jButtonComprarEtrActionPerformed
 
     /**
      * @param args the command line arguments
@@ -858,7 +939,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButtonVenderRipple;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -868,6 +948,8 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabelSaldoValor;
     private javax.swing.JLabel jLabelValorBtc;
     private javax.swing.JLabel jLabelValorEtr;
     private javax.swing.JLabel jLabelValorRpp;

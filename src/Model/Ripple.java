@@ -5,6 +5,7 @@
 package Model;
 
 import java.util.Random;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -31,17 +32,19 @@ public class Ripple extends Moedas {
         this.cotacaoMoeda = cotacaoMoeda;
     }
     
-    public void cotacaoRipple(){
+    public float cotacaoRipple(){
         Random number = new Random();
-        float cotacaoMoeda = number.nextFloat();
-        System.out.println(cotacaoMoeda);
+        cotacaoMoeda = number.nextFloat();
+        return cotacaoMoeda;
     }
     
     public void comprarRipple(int quantidade){
+        JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
         quantidadeMoeda += quantidade;
     }
     
     public void venderRipple(int quantidade){
+        JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
         if(quantidadeMoeda < quantidade){
             System.out.println("Quantidade de Ripples insuficiente");
         } else {

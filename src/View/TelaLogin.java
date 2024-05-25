@@ -18,6 +18,7 @@ public class TelaLogin extends javax.swing.JFrame {
     
     public TelaLogin() {
         initComponents();
+        controller = new TelaLoginController(this);
     }
 
     /**
@@ -124,12 +125,9 @@ public class TelaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        TelaLoginController janela = new TelaLoginController();
-        Investidor investidor = new Investidor();
-        String Cpf = investidor.getCpf();
-        janela.chamaJanela();
-        janela.salvaInvestidor();
-        System.out.println(Cpf);
+
+        controller.chamaJanela();
+        controller.fechaJanela();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -179,7 +177,7 @@ public class TelaLogin extends javax.swing.JFrame {
         return jTextField2.getText();
     }
     
-
+    TelaLoginController controller;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

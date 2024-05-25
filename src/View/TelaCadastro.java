@@ -188,6 +188,7 @@ public class TelaCadastro extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         controller.chamaJanela();
+        controller.fechaJanela();
     
     }//GEN-LAST:event_jButton1ActionPerformed
 

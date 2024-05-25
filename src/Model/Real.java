@@ -4,6 +4,8 @@
  */
 package Model;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author unifmassuena
@@ -20,10 +22,13 @@ public class Real extends Moedas{
     }
     
     public void depositar(float quantidade){
+        JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
         reais += quantidade;
+        System.out.println(reais);
     }
     
     public void sacar(float quantidade){
+        JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
         if(reais < quantidade){
             System.out.println("Saldo insuficiente");
         } else {

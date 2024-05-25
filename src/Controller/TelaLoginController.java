@@ -13,22 +13,24 @@ import Model.Investidor;
  * @author unifmassuena
  */
 public class TelaLoginController {
-    private TelaLogin view = new TelaLogin();
+    private TelaLogin view;
     private Investidor investidor;
     
     public void setTela(TelaLogin view){
         this.view = view;
     }
     
-    public void salvaInvestidor(){
-        String cpf = view.getCpf();
-        String senha = view.getSenha();
-        investidor = new Investidor(cpf,cpf,senha);
+    public TelaLoginController(TelaLogin view) {
+        this.view = view;
     }
     
     public void chamaJanela(){
         JanelaPrincipal janela = new JanelaPrincipal();
         janela.setVisible(true);
+    }
+    
+    public void fechaJanela(){
+        view.setVisible(false);
     }
     
 }
