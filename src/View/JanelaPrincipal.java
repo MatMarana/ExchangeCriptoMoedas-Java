@@ -344,6 +344,54 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     public void setjLabelSaldoValor(JLabel jLabelSaldoValor) {
         this.jLabelSaldoValor = jLabelSaldoValor;
     }
+
+    public JLabel getjLabel10() {
+        return jLabel10;
+    }
+
+    public void setjLabel10(JLabel jLabel10) {
+        this.jLabel10 = jLabel10;
+    }
+
+    public JLabel getjLabel8() {
+        return jLabel8;
+    }
+
+    public void setjLabel8(JLabel jLabel8) {
+        this.jLabel8 = jLabel8;
+    }
+
+    public JLabel getjLabel9() {
+        return jLabel9;
+    }
+
+    public void setjLabel9(JLabel jLabel9) {
+        this.jLabel9 = jLabel9;
+    }
+
+    public JLabel getjLabelBtcValor() {
+        return jLabelBtcValor;
+    }
+
+    public void setjLabelBtcValor(JLabel jLabelBtcValor) {
+        this.jLabelBtcValor = jLabelBtcValor;
+    }
+
+    public JLabel getjLabelEtrValor2() {
+        return jLabelEtrValor2;
+    }
+
+    public void setjLabelEtrValor2(JLabel jLabelEtrValor2) {
+        this.jLabelEtrValor2 = jLabelEtrValor2;
+    }
+
+    public JLabel getjLabelRppValor1() {
+        return jLabelRppValor1;
+    }
+
+    public void setjLabelRppValor1(JLabel jLabelRppValor1) {
+        this.jLabelRppValor1 = jLabelRppValor1;
+    }
     
     
     
@@ -368,6 +416,12 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jButtonGerarExtrato = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabelSaldoValor = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabelBtcValor = new javax.swing.JLabel();
+        jLabelRppValor1 = new javax.swing.JLabel();
+        jLabelEtrValor2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jButtonComprarBtc = new javax.swing.JButton();
         jButtonComprarEtr = new javax.swing.JButton();
@@ -451,6 +505,24 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jLabelSaldoValor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabelSaldoValor.setText("R$0,00");
 
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel9.setText("Ripple: ");
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel10.setText("BitCoins:");
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel12.setText("Etherium: ");
+
+        jLabelBtcValor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelBtcValor.setText("R$:0,00");
+
+        jLabelRppValor1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelRppValor1.setText("R$:0,00");
+
+        jLabelEtrValor2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelEtrValor2.setText("R$:0,00");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -464,23 +536,36 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addComponent(jButtonSacar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldDeposito, javax.swing.GroupLayout.DEFAULT_SIZE, 537, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonDepositar)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonGerarExtrato)
                 .addGap(243, 243, 243))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
-                .addComponent(jLabelSaldoValor)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addComponent(jLabel8)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabelSaldoValor)
+                        .addGap(140, 140, 140)
+                        .addComponent(jLabel10)
+                        .addGap(87, 87, 87)
+                        .addComponent(jLabelBtcValor)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                        .addComponent(jLabelRppValor1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel12))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldDeposito)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonDepositar, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelEtrValor2, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -488,8 +573,14 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addGap(93, 93, 93)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jLabelSaldoValor))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
+                    .addComponent(jLabelSaldoValor)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabelBtcValor)
+                    .addComponent(jLabelRppValor1)
+                    .addComponent(jLabelEtrValor2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jTextFieldDeposito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -730,13 +821,13 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jLabelValorBtc.setText("R$0,00");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setText("Etherium");
+        jLabel5.setText("Etherium:");
 
         jLabelValorRpp.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabelValorRpp.setText("R$0,00");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel6.setText("Ripple");
+        jLabel6.setText("Ripple:");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -938,7 +1029,9 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButtonVenderEtr;
     private javax.swing.JButton jButtonVenderRipple;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -949,6 +1042,10 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelBtcValor;
+    private javax.swing.JLabel jLabelEtrValor2;
+    private javax.swing.JLabel jLabelRppValor1;
     private javax.swing.JLabel jLabelSaldoValor;
     private javax.swing.JLabel jLabelValorBtc;
     private javax.swing.JLabel jLabelValorEtr;

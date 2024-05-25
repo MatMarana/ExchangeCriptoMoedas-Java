@@ -32,7 +32,7 @@ public class Etherium extends Moedas {
     
     public float cotacaoEtherium(){
         Random number = new Random();
-        cotacaoMoeda = number.nextFloat();
+        cotacaoMoeda = number.nextFloat(5,1000);
         System.out.println(cotacaoMoeda);
         return cotacaoMoeda;
     }

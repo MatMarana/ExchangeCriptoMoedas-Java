@@ -6,6 +6,11 @@ package Controller;
 import View.TelaCadastro;
 import View.JanelaPrincipal;
 import Model.Investidor;
+import DAO.InvestidorDAO;
+import DAO.Conexao;
+import java.sql.Connection;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /**
  *

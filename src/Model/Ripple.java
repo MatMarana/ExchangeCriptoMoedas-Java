@@ -34,7 +34,7 @@ public class Ripple extends Moedas {
     
     public float cotacaoRipple(){
         Random number = new Random();
-        cotacaoMoeda = number.nextFloat();
+        cotacaoMoeda = number.nextFloat(5,1000);
         return cotacaoMoeda;
     }
     

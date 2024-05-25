@@ -22,15 +22,14 @@ public class Real extends Moedas{
     }
     
     public void depositar(float quantidade){
-        JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
         reais += quantidade;
         System.out.println(reais);
     }
     
     public void sacar(float quantidade){
-        JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showInputDialog(null,"Digite sua senha","Alerta",JOptionPane.INFORMATION_MESSAGE);
         if(reais < quantidade){
-            System.out.println("Saldo insuficiente");
+            JOptionPane.showInputDialog(null,"Saldo Insuficiente","Alerta",JOptionPane.INFORMATION_MESSAGE);
         } else {
             reais -= quantidade;
         }

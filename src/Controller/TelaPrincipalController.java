@@ -91,7 +91,6 @@ public class TelaPrincipalController {
     public void alteraValorEtr(){
         float novoValor = etherium.cotacaoEtherium();
         String valor = novoValor + "" ;
-        JLabel valor2 = new JLabel(valor);
         view.getjLabelValorEtr().setText(valor);
     }
     
@@ -115,6 +114,18 @@ public class TelaPrincipalController {
     }
     
     public void gerarExtrato(){
+        
+    }
+    
+    public void alteraSaldoBtc(){
+        
+    }
+    
+    public void alteraSaldoRpp(){
+        
+    }
+    
+    public void alteraSaldoEtr(){
         
     }
     

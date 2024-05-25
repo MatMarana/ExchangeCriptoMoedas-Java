@@ -11,8 +11,8 @@ import javax.swing.JOptionPane;
  * @author unifmassuena
  */
 public class BitCoin extends Moedas{
-    private int quantidadeMoeda = 0;
-    private float cotacaoMoeda = 0;
+    private int quantidadeMoeda;
+    private float cotacaoMoeda;
 
     public int getQuantidadeMoeda() {
         return quantidadeMoeda;
@@ -32,19 +32,18 @@ public class BitCoin extends Moedas{
     
     public float cotacaoBitCoin(){
         Random number = new Random();
-        cotacaoMoeda = number.nextFloat();
+        cotacaoMoeda = number.nextFloat(5,1000);
         System.out.println(cotacaoMoeda);
         return cotacaoMoeda;
     }
     
     public void comprarBitCoin(int quantidade){
         JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
-        quantidadeMoeda += quantidade;
+        quantidadeMoeda = quantidadeMoeda + quantidade;
     }
     
     public void venderBitCoin(int quantidade){
         JOptionPane.showInputDialog(null,"alerta","Digite sua senha",JOptionPane.INFORMATION_MESSAGE);
-        
         if(quantidadeMoeda < quantidade){
             System.out.println("Quantidade de BitCoins insuficiente");
             JOptionPane.showMessageDialog(null, "Alerta","Quantidade de BitCoins insuficiente",JOptionPane.ERROR_MESSAGE);
