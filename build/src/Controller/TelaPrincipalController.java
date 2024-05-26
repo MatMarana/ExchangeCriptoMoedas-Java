@@ -32,19 +32,19 @@ public class TelaPrincipalController {
         this.view = view;
     }
     
-    public void deposito(){
+    public void deposito(){ // função que aplica o depósito
         String valorDepositado = view.getjTextFieldDeposito().getText();
         float valorDepositoConvertido = Float.valueOf(valorDepositado);
         real.depositar(valorDepositoConvertido);
     }
     
-    public void saque(){
+    public void saque(){ // função que aplica o saque
         String valorSaque = view.getjTextFieldSaque().getText();
         float valorSacado = Float.valueOf(valorSaque);
         real.sacar(valorSacado);
     }
     
-    public void venderBitcoin(){
+    public void venderBitcoin(){ // função de venda de bicoin
         String quantidadeVendida = view.getjTextFieldVenderBtc().getText();
         float quantidadeBitcoin = Float.valueOf(quantidadeVendida);
         String bitcoins = bitcoin.venderBitCoin(quantidadeBitcoin) + "";
@@ -55,7 +55,7 @@ public class TelaPrincipalController {
         
     }
     
-    public void comprarBitcoin(){
+    public void comprarBitcoin(){ // função que compra bitcoin
         String quantidadeComprada = view.getjTextFieldComprarBtc().getText();
         float quantidade = Float.valueOf(quantidadeComprada);
         String reais = "R$" +  real.comprarBitcoin(quantidade) + "";
@@ -66,7 +66,7 @@ public class TelaPrincipalController {
         
     }
     
-     public void venderRipple(){
+     public void venderRipple(){ // função de venda de ripple
         String quantidadeVendida = view.getjTextFieldVenderRpp().getText();
         float quantidadeRipple = Float.valueOf(quantidadeVendida);
         String ripples = ripple.venderRipple(quantidadeRipple) + "";
@@ -76,7 +76,7 @@ public class TelaPrincipalController {
         
     }
     
-    public void comprarRipple(){
+    public void comprarRipple(){ // função de compra de ripple
         String quantidadeComprada = view.getjTextFieldComprarRpp().getText();
         float quantidade = Float.valueOf(quantidadeComprada);
         String reais = "R$" +  real.comprarRipple(quantidade) + "";
@@ -86,7 +86,7 @@ public class TelaPrincipalController {
         
     }
     
-     public void venderEtherium(){
+     public void venderEtherium(){ // função de venda de Etherium
         String quantidadeVendida = view.getjTextFieldVenderEtr().getText();
         float quantidadeEtherium = Float.valueOf(quantidadeVendida);
         String etheriums = etherium.venderEtherium(quantidadeEtherium) + "";
@@ -96,7 +96,7 @@ public class TelaPrincipalController {
         
     }
     
-    public void comprarEtherium(){
+    public void comprarEtherium(){ // função de compra de Etherium
         String quantidadeComprada = view.getjTextFieldComprarEtr().getText();
         float quantidade = Float.valueOf(quantidadeComprada);
         String reais = "R$" +  real.comprarEtherium(quantidade) + "";
@@ -106,32 +106,32 @@ public class TelaPrincipalController {
         
     }
     
-    public void alteraValorEtr(){
+    public void alteraValorEtr(){ // Muda a cotação do Etherium
         float novoValor = etherium.cotacaoEtherium();
         String valor = "R$" + novoValor + "" ;
         view.getjLabelValorEtr().setText(valor);
     }
     
-    public void alteraValorRipple(){
+    public void alteraValorRipple(){ // Muda a cotação do Ripple
         float novoValor = ripple.cotacaoRipple();
         String valor = "R$" + novoValor + "" ;
         view.getjLabelValorRpp().setText(valor);
     }
     
-    public void alteraValorBitcoin(){
+    public void alteraValorBitcoin(){ // Muda a cotação do Bitcoin
         float novoValor = bitcoin.cotacaoBitCoin();
         String valor = "R$" + novoValor + "" ;
         view.getjLabelValorBtc().setText(valor);
     }
     
-    public void alteraSaldo(){
+    public void alteraSaldo(){ // Muda a o valor do saldo mostrado na tela
         float quantidade = real.getReais();
         String quantidade2 = "R$" + quantidade + "";
         view.getjLabelSaldoValor().setText(quantidade2);
         
     }
     
-    public void consultarSenha(){
+    public void consultarSenha(){ // Consulta a senha
         String senha = JOptionPane.showInputDialog(view,
                 "Digite a Senha","Senha",JOptionPane.INFORMATION_MESSAGE);
         Investidor investidor = new Investidor(senha);
@@ -146,9 +146,6 @@ public class TelaPrincipalController {
                     "Erro!", JOptionPane.ERROR_MESSAGE);
             
         }
-    }
-    public void gerarExtrato(){
-        
     }
     
     

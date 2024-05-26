@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
  */
 public class BitCoin extends Moedas{
     private float bitcoins;
+    private float valorBitcoins = 100;
     
     public float cotacaoBitCoin(){
         Random number = new Random();

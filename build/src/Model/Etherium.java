@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
  */
 public class Etherium extends Moedas {
     private float etherium;
+    private float valorEtherium = 70;
 
     public float getQuantidadeMoeda() {
         return etherium;
