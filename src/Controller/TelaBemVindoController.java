@@ -22,16 +22,16 @@ public class TelaBemVindoController {
         this.view = view;
     }
     
-    public void ChamaLogin(){
+    public void ChamaLogin(){ // Função que abre a tela de Login
         TelaLogin view = new TelaLogin();
         view.setVisible(true);
     }
     public void ChamaCadastro(){
-        TelaCadastro view = new TelaCadastro();
+        TelaCadastro view = new TelaCadastro(); // Função que Abre a tela de Cadastro
         view.setVisible(true);
     }
     
-    public void fechaJanela(){
+    public void fechaJanela(){ // Função que Fecha a tela de Bem-vindo
         view.setVisible(false);
     }
     

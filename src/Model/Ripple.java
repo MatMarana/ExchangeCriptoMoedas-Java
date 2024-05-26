@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 public class Ripple extends Moedas {
     
     private float ripple;
+    private float valorRipple = 30;
 
     public float getQuantidadeMoeda() {
         return ripple;
