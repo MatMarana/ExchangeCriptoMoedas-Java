@@ -40,18 +40,21 @@ public class TelaLoginController {
             InvestidorDAO dao = new InvestidorDAO(connection);
             try(ResultSet resultado = dao.consultar(investidor)){
                 if(resultado.next()){
-                    JOptionPane.showMessageDialog(view,"Login Feito com Sucesso", "Login Feito!",
+                    JOptionPane.showMessageDialog(view,
+                            "Login Feito com Sucesso", "Login Feito!",
                         JOptionPane.INFORMATION_MESSAGE);
                     JanelaPrincipal janela = new JanelaPrincipal();
                     janela.setVisible(true);
                     view.setVisible(false);
                 } else {
-                    JOptionPane.showMessageDialog(view,"Cpf ou senha Incorretos", "Login Feito!",
-                        JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(view,
+                            "Cpf ou Senha Incorretos", "Erro!",
+                        JOptionPane.ERROR_MESSAGE);
                 }
             }
         }catch(SQLException e){
-            JOptionPane.showMessageDialog(view,"Erro de Conexão", "Erro!", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(view,"Erro de Conexão", 
+                    "Erro!", JOptionPane.ERROR_MESSAGE);
             
         }
         

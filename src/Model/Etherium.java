@@ -45,7 +45,8 @@ public class Etherium extends Moedas {
     
     public float venderEtherium(float quantidade){
         if(etherium < quantidade){
-            System.out.println("Quantidade de Etheriums insuficiente");
+            JOptionPane.showMessageDialog(null, 
+                    "Quantidade de Ehteriums Insuficiente","Alerta",JOptionPane.ERROR_MESSAGE);
         } else {
             etherium -= quantidade;
         }

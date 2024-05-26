@@ -3,11 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Controller;
+import DAO.Conexao;
+import DAO.InvestidorDAO;
 import View.JanelaPrincipal;
 import Model.Real;
 import Model.BitCoin;
 import Model.Etherium;
+import Model.Investidor;
 import Model.Ripple;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -64,7 +71,7 @@ public class TelaPrincipalController {
         float quantidadeRipple = Float.valueOf(quantidadeVendida);
         String ripples = ripple.venderRipple(quantidadeRipple) + "";
         String reais = "R$" +real.venderRipple() + "";
-        view.getjLabelBtcValor().setText(ripples);
+        view.getjLabelRppValor1().setText(ripples);
         view.getjLabelSaldoValor().setText(reais);
         
     }
@@ -84,7 +91,7 @@ public class TelaPrincipalController {
         float quantidadeEtherium = Float.valueOf(quantidadeVendida);
         String etheriums = etherium.venderEtherium(quantidadeEtherium) + "";
         String reais = "R$" +real.venderEtherium() + "";
-        view.getjLabelBtcValor().setText(etheriums);
+        view.getjLabelEtrValor2().setText(etheriums);
         view.getjLabelSaldoValor().setText(reais);
         
     }
@@ -94,7 +101,7 @@ public class TelaPrincipalController {
         float quantidade = Float.valueOf(quantidadeComprada);
         String reais = "R$" +  real.comprarEtherium(quantidade) + "";
         String etheriums = etherium.comprarEtherium(quantidade) + "";
-        view.getjLabelBtcValor().setText(etheriums);
+        view.getjLabelEtrValor2().setText(etheriums);
         view.getjLabelSaldoValor().setText(reais);
         
     }
@@ -124,7 +131,22 @@ public class TelaPrincipalController {
         
     }
     
-    
+    public void consultarSenha(){
+        String senha = JOptionPane.showInputDialog(view,
+                "Digite a Senha","Senha",JOptionPane.INFORMATION_MESSAGE);
+        Investidor investidor = new Investidor(senha);
+        Conexao conn = new Conexao();
+        try(Connection connection = conn.getConnection()){
+            InvestidorDAO dao = new InvestidorDAO(connection);
+            JOptionPane.showMessageDialog(view,
+                "Senha Correta", "Prabéns!",
+                JOptionPane.INFORMATION_MESSAGE);
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(view,"Erro de Conexão", 
+                    "Erro!", JOptionPane.ERROR_MESSAGE);
+            
+        }
+    }
     public void gerarExtrato(){
         
     }

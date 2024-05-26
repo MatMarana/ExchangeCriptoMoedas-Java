@@ -38,4 +38,14 @@ public class InvestidorDAO {
         conn.close();
         return resultado;
     }
+    
+    public ResultSet consultarSenha(Investidor investidor) throws SQLException{
+        String sql = "SELECT * FROM investidor WHERE senha = ?";
+        PreparedStatement statement = conn.prepareStatement(sql);
+        statement.setString(1,investidor.getSenha());
+        statement.execute();
+        ResultSet resultado = statement.getResultSet();
+        conn.close();
+        return resultado;
+    }
 }

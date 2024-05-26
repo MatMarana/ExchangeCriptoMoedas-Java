@@ -48,7 +48,7 @@ public class Ripple extends Moedas {
     public float venderRipple(float quantidade){
         if(ripple < quantidade){
             JOptionPane.showMessageDialog(null, 
-                    "Quantidade de Bitcoins Insuficiente","Alerta",JOptionPane.ERROR_MESSAGE);
+                    "Quantidade de Ripples Insuficiente","Alerta",JOptionPane.ERROR_MESSAGE);
         } else {
             ripple -= quantidade;
         }

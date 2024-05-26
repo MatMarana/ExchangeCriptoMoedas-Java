@@ -48,6 +48,10 @@ public class Investidor {
         this.senha = senha;
     }
 
+    public Investidor(String senha) {
+        this.senha = senha;
+    }
+
     
     public Investidor() {
     }
